@@ -31,6 +31,7 @@
   p {
     color: #666;
     font-style: italic;
+    display: none; /* Começa oculto */
   }
 
   label {
@@ -44,13 +45,22 @@
     border-radius: 4px;
   }
 </style>
+<script>
+  function mostrarFrase() {
+    var nome = document.getElementById("nome").value;
+    if (nome !== "") {
+      document.getElementById("frase").style.display = "block";
+    }
+  }
+</script>
 </head>
 <body>
 <div class="content-box">
   <h1>Olá, qual é o seu nome?</h1>
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
-  <p>"Por que o programador saiu de casa? Porque estava com bug na vida dele!"</p>
+  <button onclick="mostrarFrase()">Mostrar Frase</button>
+  <p id="frase">"Por que o programador saiu de casa? Porque estava com bug na vida dele!"</p>
 </div>
 </body>
 </html>
