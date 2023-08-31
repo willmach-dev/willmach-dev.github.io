@@ -44,11 +44,17 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  button {
+    margin-top: 10px;
+  }
 </style>
 <script>
   function mostrarFrase() {
     var nome = document.getElementById("nome").value;
     if (nome !== "") {
+      document.getElementById("nomePrincipal").innerText = "Olá, " + nome + "!";
+      document.getElementById("botaoMostrar").style.display = "none";
       document.getElementById("frase").style.display = "block";
     }
   }
@@ -56,10 +62,10 @@
 </head>
 <body>
 <div class="content-box">
-  <h1>Olá, qual é o seu nome?</h1>
+  <h1 id="nomePrincipal">Olá, qual é o seu nome?</h1>
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
-  <button onclick="mostrarFrase()">Mostrar Frase</button>
+  <button id="botaoMostrar" onclick="mostrarFrase()">Mostrar Frase</button>
   <p id="frase">"Por que o programador saiu de casa? Porque estava com bug na vida dele!"</p>
 </div>
 </body>
