@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minha Página Engraçada</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .content-box {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+    font-style: italic;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+</style>
 </head>
 <body>
-<h1>Olá, meu nome é William</h1>
-<p>"Por que o programador saiu de casa? Porque estava com bug na vida dele!"</p>
+<div class="content-box">
+  <h1>Olá, qual é o seu nome?</h1>
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+  <p>"Por que o programador saiu de casa? Porque estava com bug na vida dele!"</p>
+</div>
 </body>
 </html>
